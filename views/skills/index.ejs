@@ -1,9 +1,12 @@
-<body>
-    <h1>Dev Skills</h1>
-    <ul>
-      <% skills.forEach(function(s) { %>
-        <li>
-          <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+<%- include('./partials/header') %>
+
+<h3>Skills PST <%= time %></h3>
+
+<ul>
+  <% skills.forEach(function(s) { %>
+    <li>
+      <a href="/skills/<%= s.id %>"><%= s.skill %></a>
       <% }); %>
     </ul>
-  </body>
+    
+    <%- include('./partials/footer') %>
