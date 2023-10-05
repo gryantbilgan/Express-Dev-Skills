@@ -1,11 +1,23 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const skillsCtrl = require('../controllers/skills');
 
 /* GET users listing. */
-// GET /todos
+
+// GET /skills
 router.get('/', skillsCtrl.index);
-//GET /todos/:id
+// GET /skills/new
+router.get('/new', skillsCtrl.new);
+// GET /skills/:id
 router.get('/:id', skillsCtrl.show);
+// GET /skills/:id/edit
+router.get('/:id/edit', skillsCtrl.edit);
+// POST /skills
+router.post('/:id', skillsCtrl.create);
+// DELETE /skills/:id
+router.delete('/:id', skillsCtrl.delete);
+// PUT /skills/:id
+router.put('/:id', skillsCtrl.update);
+
 
 module.exports = router;
