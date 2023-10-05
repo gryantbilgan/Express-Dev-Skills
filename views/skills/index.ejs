@@ -10,7 +10,7 @@
       </form>
       <a href="/skills/<%= s.id %>"><%= s.skill %></a>
       -
-      <%= s.learned ? 'learned' : 'not learned' %>
+      <%= s.desc ? 'learned' : 'not learned' %>
       <% }); %>
     </ul>
     <a href="/skills/new">Level Up</a>
